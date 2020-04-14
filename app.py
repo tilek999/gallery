@@ -14,7 +14,7 @@ def gallery():
 def add_picture():
     picture = request.form.get("picture")
     gal = open('gallery.txt', 'a+', encoding="utf-8")
-    gal.write(picture)
+    gal.write( picture + '\n' )
     gal.close()
     return render_template("p.html")
 
