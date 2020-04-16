@@ -16,7 +16,7 @@
           </div>
           <ul class="nav navbar-nav">
             <li class="active"><a href="#"></a></li>
-            <li><a href="{{ url_for('ad.html') }}">ad picture</a></li>
+            <li><a href="{{ url_for('add') }}">ad picture</a></li>
           </ul>
         </div>
       </nav>
@@ -25,7 +25,7 @@
     <h2>All pictures :</h2>
     <ol class="list-group list-group-flush">
         {% for g in gal %}
-            <li class="list-group-item">{{ g }}</li>
+            <img src="{{ g }}"> 
         {% endfor %}
     </ol>
 {% endblock %}

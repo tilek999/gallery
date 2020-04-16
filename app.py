@@ -8,7 +8,7 @@ def gallery():
     gal = open("gallery.txt", "r", encoding="utf-8")
     gal.list = [row for row in gal]
     gal.close
-    return render_template("gallery.html")
+    return render_template("gallery.html" ,gal=gal)
 
 @app.route("/add-picture", methods=["POST"])
 def add_picture():
@@ -16,8 +16,7 @@ def add_picture():
     gal = open('gallery.txt', 'a+', encoding="utf-8")
     gal.write( picture + '\n' )
     gal.close()
-    return render_template("p.html")
-
+    return render_template("gallery.html")
 @app.route("/ad")
 def add():
     return render_template("ad.html")    
