@@ -12,9 +12,9 @@ def gallery():
 
 @app.route("/add-picture", methods=["POST"])
 def add_picture():
-    picture = request.form.get("picture")
+    g = request.form.get("g")
     gal = open('gallery.txt', 'a+', encoding="utf-8")
-    gal.write( picture + '\n' )
+    gal.write( g + '\n' )
     gal.close()
     return render_template("gallery.html")
 @app.route("/ad")
