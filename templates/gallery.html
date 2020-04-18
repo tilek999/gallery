@@ -13,11 +13,11 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="{{ url_for('gallery.html') }}">Gallery</a>
+            <a class="navbar-brand" href="{{ url_for('gallery') }}">Gallery</a>
           </div>
           <ul class="nav navbar-nav">
             <li class="active"><a href="#"></a></li>
-            <li><a href="{{ url_for('add_picture') }}">ad picture</a></li>
+            <li><a href="{{ url_for('add') }}">ad picture</a></li>
           </ul>
         </div>
       </nav>
@@ -25,8 +25,10 @@
 {% block content %}
     <h2>All pictures :</h2>
     <ol class="list-group list-group-flush">
-        {% for g in gal %}
-            <img src="{{ g }}"> 
+        {% for g in l %}
+            <h4>{{l.0}}</h4>
+            <img src="{{ l.1 }}"> 
+            <li>{{l.2}}</li>
         {% endfor %}
     </ol>
 {% endblock %}
