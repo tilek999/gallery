@@ -1,0 +1,35 @@
+body{background-color: rgb(95, 95, 95);}
+
+.content {
+    background-color: blanchedalmond;
+    margin: 30px 30px;
+    padding: 100px;
+}
+img {
+    width: 50%;
+    margin: 15px;
+    size: 400px;
+}
+a {
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+.decor{
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 60px;
+}  
+h1{
+    margin-left: 30px;
+} 
+
+h4{
+    font-size: 500px ;
+    font-family: fantasy;
+}
+
+li{
+    font-family: cursive;
+}
+

@@ -13,7 +13,7 @@ def gallery():
         g = row[0].value
         c = row[1].value
         title = row[2].value
-        lst = [title, g, c]
+        lst = [g, c, title]
         l.append(lst)
 
     return render_template("gallery.html" ,l=l)
@@ -25,8 +25,8 @@ def add_picture():
     title = request.form.get("title")
     
     excel = load_workbook("gallery.xlsx")
-    sheet = excel["sheet1"]
-    sheet.append(title, g, c)
+    sheet = excel["Sheet1"]
+    sheet.append([title, g, c])
     excel.save("gallery.xlsx")
     return render_template("gallery.html")
 @app.route("/ad")

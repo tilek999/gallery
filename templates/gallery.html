@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='gallery.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -16,21 +16,24 @@
             <a class="navbar-brand" href="{{ url_for('gallery') }}">Gallery</a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#"></a></li>
+            
             <li><a href="{{ url_for('add') }}">ad picture</a></li>
           </ul>
         </div>
       </nav>
 
 {% block content %}
-    <h2>All pictures :</h2>
-    <ol class="list-group list-group-flush">
-        {% for g in l %}
-            <h4>{{l.0}}</h4>
-            <img src="{{ l.1 }}"> 
-            <li>{{l.2}}</li>
+<h1>All pictures :</h1>
+  <div class="content">
+        {% for e in l %}
+            <h4 class="decor">{{e.0}}:</h4>
+            <br>
+            <img src="{{e.1}}"> 
+            <br>
+            <li class="decor">{{e.2}}</li>  
+            <br>            
         {% endfor %}
-    </ol>
+  </div>  
 {% endblock %}
 </body>
 </html>
